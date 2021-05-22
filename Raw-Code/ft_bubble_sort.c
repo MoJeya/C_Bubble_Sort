@@ -13,41 +13,25 @@
 //#include <unistd.h>
 #include <stdio.h>
 
-int arrayLen(int num[])
-{
-    int cnt_1;
 
-    cnt_1 = 0;
-
-    while(num[cnt_1] != 0)
-    {
-        cnt_1++;
-    }
-
-    return cnt_1;
-}
 
 void ft_putchar(char c)
 {
     write(1,&c,1);
 }
 
-void ft_bubbleSort(int num[])
+void ft_bubbleSort(int num[], int len)
 {
     int cnt_1;
     int cnt_2;
-    int arrLen;
     int swap;
 
-    arrLen = arrayLen(num);
+    
     cnt_1 = 0;
     cnt_2 = 1;
-    while(cnt_1 <= arrLen)
+    while(cnt_1 <= len)
     {
-        if(num[cnt_2] == 0)
-        {
-            break;
-        }
+        
         if(num[cnt_1] > num[cnt_2])
         {
             swap = num[cnt_1];
@@ -62,15 +46,13 @@ void ft_bubbleSort(int num[])
     
 }
 
-void ft_printArr(int num[])
+void ft_printArr(int num[], int len)
 {
     int cnt;
-    int len;
 
-    len = arrayLen(num);
     cnt = 0;
 
-    while(cnt < len)
+    while(cnt <= len)
     {
         printf("%d ,", num[cnt]);
         cnt++;
@@ -79,19 +61,20 @@ void ft_printArr(int num[])
 
 int main()
 {
-    int num[] = {3,5,4,8,6,0};
+    
+    int num[] = {3,5,4,8,6};
 
-    ft_printArr(num);
+    ft_printArr(num,4);
     //char number;
 
     //number = '0' + (arrayLen(num)- 1);
 
    // ft_putchar(number);
 
-    ft_bubbleSort(num);
+    ft_bubbleSort(num,4);
 
     printf("\n");
-    ft_printArr(num);
+    ft_printArr(num,4);
 
     return 0; 
 }
