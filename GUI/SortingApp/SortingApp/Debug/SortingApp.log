@@ -1,2 +1,3 @@
 ﻿  main.cpp
+d:\dokumente\sorting-project_c\gui\sortingapp\sortingapp\main.cpp(67): warning C4553: '==': result of expression not used; did you intend '='?
   SortingApp.vcxproj -> D:\Dokumente\Sorting-Project_C\GUI\SortingApp\Debug\SortingApp.exe
